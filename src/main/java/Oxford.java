@@ -15,42 +15,46 @@ public class Oxford {
   private static final String KEY = "aa20d46fa4be349111629b09d4b8aaa2";
   private static final String ID = "84ab7a8c";
 
-	public static void main(String[] args) {
+	public String getDefinition(String word) {
+
+    DefaultHttpClient httpClient = new DefaultHttpClient();
+
+    RetrieveEntry re;
+
 	  try {
+  		HttpGet getRequest = new HttpGet(BASE_URL + "/" + word);
+  		getRequest.addHeader("accept", "application/json");
+      getRequest.addHeader("app_id", ID);
+      getRequest.addHeader("app_key", KEY);
 
-		DefaultHttpClient httpClient = new DefaultHttpClient();
-		HttpGet getRequest = new HttpGet(BASE_URL + "/arch");
-		getRequest.addHeader("accept", "application/json");
-    getRequest.addHeader("app_id", ID);
-    getRequest.addHeader("app_key", KEY);
+  		HttpResponse response = httpClient.execute(getRequest);
 
-		HttpResponse response = httpClient.execute(getRequest);
+  		if (response.getStatusLine().getStatusCode() != 200) {
+  			throw new RuntimeException("Failed : HTTP error code : "
+  			   + response.getStatusLine().getStatusCode());
+  		}
 
-		if (response.getStatusLine().getStatusCode() != 200) {
-			throw new RuntimeException("Failed : HTTP error code : "
-			   + response.getStatusLine().getStatusCode());
-		}
+  		BufferedReader br = new BufferedReader(
+                           new InputStreamReader((response.getEntity().getContent())));
 
-		BufferedReader br = new BufferedReader(
-                         new InputStreamReader((response.getEntity().getContent())));
+  		ObjectMapper objm = new ObjectMapper();
 
-		ObjectMapper objm = new ObjectMapper();
-
-    RetrieveEntry re = objm.readValue(br, RetrieveEntry.class);
-
-    System.out.println(re);
-
-		httpClient.getConnectionManager().shutdown();
+      re = objm.readValue(br, RetrieveEntry.class);
 
 	  } catch (ClientProtocolException e) {
 
-		e.printStackTrace();
+		    e.printStackTrace();
 
 	  } catch (IOException e) {
 
-		e.printStackTrace();
-	  }
+		    e.printStackTrace();
 
+	  } finally {
+
+      httpClient.getConnectionManager().shutdown();
+
+      return re;
+      
+    }
 	}
-
 }

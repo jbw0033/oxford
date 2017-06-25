@@ -120,4 +120,15 @@ public class Sense {
   public void setVariantForms(Variant[] variantFormsIn) {
     this.variantForms = variantFormsIn;
   }
+
+  public String toString() {
+    String output = "";
+    int i = 1;
+    for (String def : definitions) {
+      output += i + ".) " + def + "\n";
+      i++;
+    }
+
+    return output;
+  }
 }
