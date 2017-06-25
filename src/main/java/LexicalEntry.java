@@ -7,7 +7,7 @@ public class LexicalEntry {
   private String language;
   private String lexicalCategory;
   private CategorizedText[] notes;
-  private Pronounciation[] pronounciations;
+  private Pronunciation[] pronunciations;
   private String text;
   private Variant[] variantForms;
 
@@ -61,12 +61,12 @@ public class LexicalEntry {
     this.notes = notesIn;
   }
 
-  public Pronounciation[] getPronounciations() {
-    return pronounciations;
+  public Pronunciation[] getPronunciations() {
+    return pronunciations;
   }
 
-  public void setPronounciations(Pronounciation[] pronounciationsIn) {
-    this.pronounciations = pronounciationsIn;
+  public void setPronunciations(Pronunciation[] pronunciationsIn) {
+    this.pronunciations = pronunciationsIn;
   }
 
   public String getText() {

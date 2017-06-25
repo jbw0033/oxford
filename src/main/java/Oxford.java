@@ -7,7 +7,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-import com.fasterxml.jackson.databind;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Oxford {
 
@@ -37,6 +37,8 @@ public class Oxford {
 		ObjectMapper objm = new ObjectMapper();
 
     RetrieveEntry re = objm.readValue(br, RetrieveEntry.class);
+
+    System.out.println(re);
 
 		httpClient.getConnectionManager().shutdown();
 

@@ -5,7 +5,7 @@ public class Entry {
   private GrammaticalFeatures[] grammaticalFeatures;
   private String homographNumber;
   private CategorizedText[] notes;
-  private Pronounciation[] pronounciations;
+  private Pronunciation[] pronunciations;
   private Sense[] senses;
   private Variant[] variantForms;
 
@@ -43,12 +43,12 @@ public class Entry {
     this.notes = notesIn;
   }
 
-  public Pronounciation[] getPronounciations() {
-    return pronounciations;
+  public Pronunciation[] getPronunciations() {
+    return pronunciations;
   }
 
-  public void setPronounciations(Pronounciation[] pronounciationsIn) {
-    this.pronounciations = pronounciationsIn;
+  public void setPronunciations(Pronunciation[] pronunciationsIn) {
+    this.pronunciations = pronunciationsIn;
   }
 
   public Sense[] getSenses() {

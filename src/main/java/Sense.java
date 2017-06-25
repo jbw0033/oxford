@@ -8,7 +8,7 @@ public class Sense {
   private Example[] examples;
   private String id;
   private CategorizedText[] notes;
-  private Pronounciation[] pronounciations;
+  private Pronunciation[] pronunciations;
   private String[] regions;
   private String[] registers;
   private Sense[] subsenses;
@@ -73,12 +73,12 @@ public class Sense {
     this.notes = notesIn;
   }
 
-  public Pronounciation[] getPronounciations() {
-    return pronounciations;
+  public Pronunciation[] getPronunciations() {
+    return pronunciations;
   }
 
-  public void setPronounciations(Pronounciation[] pronounciationsIn) {
-    this.pronounciations = pronounciationsIn;
+  public void setPronunciations(Pronunciation[] pronunciationsIn) {
+    this.pronunciations = pronunciationsIn;
   }
 
   public String[] getRegions() {

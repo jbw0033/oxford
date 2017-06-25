@@ -5,7 +5,7 @@ public class HeadwordEntry {
   private String id;
   private String language;
   private LexicalEntry[] lexicalEntries;
-  private Pronounciation[] pronounciations;
+  private Pronunciation[] pronunciations;
   private String type;
   private String word;
 
@@ -35,12 +35,12 @@ public class HeadwordEntry {
     this.lexicalEntries = lexicalEntriesIn;
   }
 
-  public Pronounciation[] getPronounciations() {
-    return pronounciations;
+  public Pronunciation[] getPronunciations() {
+    return pronunciations;
   }
 
-  public void setPronounciations(Pronounciation[] pronounciationsIn) {
-    this.pronounciations = pronounciationsIn;
+  public void setPronunciations(Pronunciation[] pronunciationsIn) {
+    this.pronunciations = pronunciationsIn;
   }
 
   public String getType() {

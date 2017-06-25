@@ -1,13 +1,13 @@
 package oxford;
 
-public class Pronounciation {
+public class Pronunciation {
   private String audioFile;
   private String[] dialects;
   private String phoneticNotation;
   private String phoneticSpelling;
   private String[] regions;
 
-  public Pronounciation() {}
+  public Pronunciation() {}
 
   public String getAudioFile() {
     return audioFile;
