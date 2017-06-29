@@ -19,7 +19,7 @@ public class Oxford {
 
     DefaultHttpClient httpClient = new DefaultHttpClient();
 
-    RetrieveEntry re;
+    RetrieveEntry re = new RetrieveEntry();
 
 	  try {
   		HttpGet getRequest = new HttpGet(BASE_URL + "/" + word);
@@ -53,8 +53,8 @@ public class Oxford {
 
       httpClient.getConnectionManager().shutdown();
 
-      return re;
-      
+      return re.toString();
+
     }
 	}
 }
