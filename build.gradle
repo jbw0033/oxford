@@ -1,17 +1,18 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = "oxford.Oxford"
-
 repositories {
   mavenCentral()
 }
+
+mainClassName = "Oxford.class"
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
 dependencies {
   compile 'org.apache.httpcomponents:httpclient:4.5.3'
+
   compile 'com.fasterxml.jackson.core:jackson-core:2.9.+'
   compile 'com.fasterxml.jackson.core:jackson-annotations:2.9.+'
   compile 'com.fasterxml.jackson.core:jackson-databind:2.9.+'

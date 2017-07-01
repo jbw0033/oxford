@@ -3,19 +3,21 @@ package oxford;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Oxford {
 
   private static final String BASE_URL = "https://od-api.oxforddictionaries.com/api/v1/entries/en";
-  private static final String KEY = "aa20d46fa4be349111629b09d4b8aaa2";
-  private static final String ID = "84ab7a8c";
+  private static final String KEY = "";
+  private static final String ID = "";
 
-	public String getDefinition(String word) {
+	public static String getDefinition(String word) {
 
     DefaultHttpClient httpClient = new DefaultHttpClient();
 

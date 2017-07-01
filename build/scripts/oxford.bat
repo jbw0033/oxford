@@ -72,7 +72,7 @@ set CMD_LINE_ARGS=%$
 set CLASSPATH=%APP_HOME%\lib\oxford.jar;%APP_HOME%\lib\httpclient-4.5.3.jar;%APP_HOME%\lib\jackson-core-2.9.0.pr4.jar;%APP_HOME%\lib\jackson-annotations-2.9.0.pr4.jar;%APP_HOME%\lib\jackson-databind-2.9.0.pr4.jar;%APP_HOME%\lib\httpcore-4.4.6.jar;%APP_HOME%\lib\commons-logging-1.2.jar;%APP_HOME%\lib\commons-codec-1.9.jar
 
 @rem Execute oxford
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %OXFORD_OPTS%  -classpath "%CLASSPATH%" oxford.Oxford %CMD_LINE_ARGS%
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %OXFORD_OPTS%  -classpath "%CLASSPATH%" Oxford.class %CMD_LINE_ARGS%
 
 :end
 @rem End local scope for the variables with windows NT shell
